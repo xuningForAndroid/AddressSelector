@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:maxHeight="500dp"
+    android:background="@drawable/address_select_shape"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="20dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请选择所在地区"
+            android:textColor="#ff272727"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            />
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/close"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+
+    <com.ning.addressselector.EnhanceTabLayout
+        android:id="@+id/tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabIndicatorHeight="2dp"
+        app:tabIndicatorWidth="10dp"
+        app:tabTextColor="#272727"
+        app:tab_Mode="mode_scrollable"
+        app:tabSelectTextColor="#272727"
+        app:tabIndicatorColor="#ED5826"
+        app:tabTextSize="14sp"
+        >
+
+    </com.ning.addressselector.EnhanceTabLayout>
+
+
+
+    <ListView
+        android:id="@+id/lv_address"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:divider="@null"
+        android:layout_weight="1">
+    </ListView>
+
+</LinearLayout>
